@@ -1,10 +1,11 @@
 <script setup>
-// import { ref } from "vue";
-import CountUp from '@/components/CountUp.vue'
+import { ref } from "vue";
+import ShowCount from '@/components/ShowCount.vue'
+const count = ref(0)
 </script>
 <template>
-<CountUp />
-<CountUp />
+<ShowCount :foo="count" />
+<button @click="count++">add</button>
 </template>
 <style>
 </style>
