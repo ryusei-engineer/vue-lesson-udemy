@@ -1,10 +1,9 @@
 <script setup>
 // import { ref } from "vue";
-import CountUp from '@/components/CountUp.vue'
+
 </script>
 <template>
-<CountUp />
-<CountUp />
+<p>aaa</p>
 </template>
 <style>
 </style>
