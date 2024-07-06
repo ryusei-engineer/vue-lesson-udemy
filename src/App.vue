@@ -1,20 +1,19 @@
 <script setup>
-import { ref, reactive } from "vue";
-const message = ref('<h1>hello</h1>')
+import { ref, computed } from "vue";
+const input = ref('')
 
-const URL = ref('https://ja.vuejs.org/')
-const int = ref(0)
-function increment(){
-  int.value++
-}
+const score = ref(0)
+const evaluation = computed(() => {
+  return score.value > 3 ? 'good' : 'bad'
+})
 </script>
 <template>
-  <p>{{ message }}</p>
-  <p v-html="message"></p>
+  <p>{{ input }}</p>
+  <input v-model="input" type="text" name="" id="">
 
-  <a v-bind:href="URL">Vue.js</a>
-  <p>{{ int }}</p>
-  <button v-on:click="increment">click</button>
+  <p>{{ evaluation }}</p>
+
+  
 </template>
 <style>
 </style>
